@@ -1,5 +1,4 @@
 import { AlertCircle, Check } from 'lucide-react'
-import { Button } from './ui/button'
 import { ApprovalRequest } from '../types'
 
 interface NeedsApprovalProps {

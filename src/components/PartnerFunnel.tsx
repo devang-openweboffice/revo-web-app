@@ -52,8 +52,7 @@ export const PartnerFunnel = ({
       {/* Funnel */}
 <div className="flex flex-wrap lg:h-40 items-end gap-6">
   {funnel.map((stage, index) => {
-    const maxValue = Math.max(...funnel.map(f => f.value))
-    const height = (stage.value / maxValue) * 100
+    const height = maxValue ? (stage.value / maxValue) * 100 : 0
     const isSales = stage.label === 'SALES'
 
     return (

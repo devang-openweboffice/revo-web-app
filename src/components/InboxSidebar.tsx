@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Send } from "lucide-react";
 import clsx from "clsx";
+import { InboxMessage } from "../types";
 
 interface InboxSidebarProps {
   messages: InboxMessage[];

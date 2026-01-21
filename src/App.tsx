@@ -4,12 +4,12 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useDashboardData } from "./hooks/useDashboardData";
 import { Header } from "./components/Header";
 import { NotificationCards } from "./components/NotificationCards";
-import { NeedsApproval } from "./components/NeedsApproval";
-import { PayoutsCard } from "./components/PayoutsCard";
-import { PartnerFunnel } from "./components/PartnerFunnel";
-import { SummaryCards } from "./components/SummaryCards";
-import { ProgramGrowth } from "./components/ProgramGrowth";
-import { InboxSidebar } from "./components/InboxSidebar";
+// import { NeedsApproval } from "./components/NeedsApproval";
+// import { PayoutsCard } from "./components/PayoutsCard";
+// import { PartnerFunnel } from "./components/PartnerFunnel";
+// import { SummaryCards } from "./components/SummaryCards";
+// import { ProgramGrowth } from "./components/ProgramGrowth";
+// import { InboxSidebar } from "./components/InboxSidebar";
 import { LoadingState } from "./components/LoadingState";
 import { ErrorState } from "./components/ErrorState";
 // import { TopSummaryBar } from "./components/summary/TopSummaryBar";
@@ -67,7 +67,7 @@ function App() {
       <PageTabs />
       <Toolbar /> */}
 
-      <div className="container mt-6">
+      {/* <div className="container mt-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           
           <div
@@ -107,7 +107,7 @@ function App() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -68,11 +68,11 @@ function App() {
       <Toolbar />
 
       <div className="container mt-6">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <div className="flex flex-col md:flex-row gap-6">
           
           <div
             className={`space-y-6 ${
-              sidebarOpen ? "lg:col-span-8" : "lg:col-span-11"
+              sidebarOpen ? "lg:w-[calc(100%-360px)]" : "lg:w-[calc(100%-64px)]"
             }`}
           >
             <NeedsApproval approvals={data.approvals} />
@@ -99,7 +99,7 @@ function App() {
           </div>
 
           
-          <div className={"lg:col-span-1"}>
+          <div>
             <InboxSidebar
               messages={data.inboxMessages}
               open={sidebarOpen}

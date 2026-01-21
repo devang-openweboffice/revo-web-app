@@ -18,15 +18,15 @@ export const InboxSidebar = ({
       className={clsx(
         "relative rounded-[32px] bg-[#F6F1EB] shadow-sm overflow-hidden",
         "transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)]",
-        open
-          ? "w-full translate-x-0"
-          : "w-16"
+        // Mobile/tablet: always full width. Desktop: collapsible rail.
+        "w-full",
+        open ? "lg:w-[360px]" : "lg:w-16"
       )}
     >
       {/* Top Center Toggle */}
       <button
         onClick={onToggle}
-        className="absolute left-1/2 top-5 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow"
+        className="hidden lg:flex absolute left-1/2 top-5 z-10 h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow"
       >
         {open ? (
           <ChevronRight className="h-5 w-5 text-gray-700" />
@@ -37,7 +37,7 @@ export const InboxSidebar = ({
 
       {/* Collapsed Rail */}
       {!open && (
-        <div className="flex flex-col items-center gap-4 pt-20 pb-6">
+        <div className="hidden lg:flex flex-col items-center gap-4 pt-20 pb-6">
           {messages.slice(0, 6).map((m) => (
             <div key={m.id} className="relative">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-300 text-xs font-semibold">
@@ -54,8 +54,7 @@ export const InboxSidebar = ({
       )}
 
       {/* Expanded */}
-      {open && (
-        <div className="flex h-full flex-col px-4 pt-20 pb-4">
+      <div className={clsx("flex h-full flex-col px-4 pt-20 pb-4", !open && "lg:hidden")}>
           {/* Messages */}
           <div className="flex-1 space-y-4 overflow-y-auto pb-6">
             {messages.map((message) => (
@@ -115,7 +114,6 @@ export const InboxSidebar = ({
             </button>
           </div>
         </div>
-      )}
     </aside>
   );
 };

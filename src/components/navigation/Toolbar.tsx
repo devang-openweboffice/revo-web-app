@@ -66,7 +66,7 @@ export const Toolbar = () => {
         </div>
 
         {/* Right */}
-        <div className="flex items-center gap-4 text-sm text-gray-600">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
           {/* Date */}
           <Popover>
             <PopoverTrigger asChild>

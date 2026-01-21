@@ -12,9 +12,9 @@ import { ProgramGrowth } from "./components/ProgramGrowth";
 import { InboxSidebar } from "./components/InboxSidebar";
 import { LoadingState } from "./components/LoadingState";
 import { ErrorState } from "./components/ErrorState";
-import { TopSummaryBar } from "./components/summary/TopSummaryBar";
-import { PageTabs } from "./components/navigation/PageTabs";
-import { Toolbar } from "./components/navigation/Toolbar";
+// import { TopSummaryBar } from "./components/summary/TopSummaryBar";
+// import { PageTabs } from "./components/navigation/PageTabs";
+// import { Toolbar } from "./components/navigation/Toolbar";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

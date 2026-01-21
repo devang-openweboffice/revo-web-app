@@ -62,17 +62,17 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <NotificationCards notifications={data.notifications} />
-
+{/* 
       <TopSummaryBar />
       <PageTabs />
-      <Toolbar />
+      <Toolbar /> */}
 
       <div className="container mt-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           
           <div
             className={`space-y-6 ${
-              sidebarOpen ? "lg:col-span-8" : "lg:col-span-10"
+              sidebarOpen ? "lg:col-span-8" : "lg:col-span-11"
             }`}
           >
             <NeedsApproval approvals={data.approvals} />
@@ -99,7 +99,7 @@ function App() {
           </div>
 
           
-          <div className={sidebarOpen ? "lg:col-span-4" : "lg:col-span-2"}>
+          <div className={sidebarOpen ? "lg:col-span-4" : "lg:col-span-1"}>
             <InboxSidebar
               messages={data.inboxMessages}
               open={sidebarOpen}

@@ -60,8 +60,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <h1>Hello World</h1>
-      {/* <Header />
+      <Header />
       <NotificationCards notifications={data.notifications} />
 
       <TopSummaryBar />
@@ -108,7 +107,7 @@ function App() {
             />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

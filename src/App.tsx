@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 
 import { useDashboardData } from "./hooks/useDashboardData";
@@ -17,7 +17,7 @@ import { ErrorState } from "./components/ErrorState";
 // import { Toolbar } from "./components/navigation/Toolbar";
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [sidebarOpen, setSidebarOpen] = useState(false);
   const queryClient = useQueryClient();
 
   // 🔒 SAFELY execute dashboard hook

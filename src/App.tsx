@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 
 import { useDashboardData } from "./hooks/useDashboardData";
@@ -9,7 +9,7 @@ import { PayoutsCard } from "./components/PayoutsCard";
 import { PartnerFunnel } from "./components/PartnerFunnel";
 import { SummaryCards } from "./components/SummaryCards";
 import { ProgramGrowth } from "./components/ProgramGrowth";
-// import { InboxSidebar } from "./components/InboxSidebar";
+import { InboxSidebar } from "./components/InboxSidebar";
 import { LoadingState } from "./components/LoadingState";
 import { ErrorState } from "./components/ErrorState";
 import { TopSummaryBar } from "./components/summary/TopSummaryBar";
@@ -17,7 +17,7 @@ import { PageTabs } from "./components/navigation/PageTabs";
 import { Toolbar } from "./components/navigation/Toolbar";
 
 function App() {
-  // const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const queryClient = useQueryClient();
 
   // 🔒 SAFELY execute dashboard hook
@@ -71,7 +71,8 @@ function App() {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           
           <div
-            className={`space-y-6  lg:col-span-11
+            className={`space-y-6 ${
+              sidebarOpen ? "lg:col-span-8" : "lg:col-span-11"
             }`}
           >
             <NeedsApproval approvals={data.approvals} />
@@ -98,13 +99,13 @@ function App() {
           </div>
 
           
-          {/* <div className={sidebarOpen ? "lg:col-span-4" : "lg:col-span-1"}>
+          <div className={"lg:col-span-1"}>
             <InboxSidebar
               messages={data.inboxMessages}
               open={sidebarOpen}
               onToggle={() => setSidebarOpen((v) => !v)}
             />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

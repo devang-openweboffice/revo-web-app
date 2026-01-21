@@ -60,7 +60,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <h1>Hello World</h1>
+      {/* <Header />
       <NotificationCards notifications={data.notifications} />
 
       <TopSummaryBar />
@@ -69,7 +70,7 @@ function App() {
 
       <div className="container mt-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-          {/* Main Content */}
+          
           <div
             className={`space-y-6 ${
               sidebarOpen ? "lg:col-span-8" : "lg:col-span-10"
@@ -98,7 +99,7 @@ function App() {
             />
           </div>
 
-          {/* Sidebar – NEVER col-span-1 */}
+          
           <div className={sidebarOpen ? "lg:col-span-4" : "lg:col-span-2"}>
             <InboxSidebar
               messages={data.inboxMessages}
@@ -107,7 +108,7 @@ function App() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

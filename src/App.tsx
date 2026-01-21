@@ -12,9 +12,9 @@ import { NotificationCards } from "./components/NotificationCards";
 // import { InboxSidebar } from "./components/InboxSidebar";
 import { LoadingState } from "./components/LoadingState";
 import { ErrorState } from "./components/ErrorState";
-// import { TopSummaryBar } from "./components/summary/TopSummaryBar";
-// import { PageTabs } from "./components/navigation/PageTabs";
-// import { Toolbar } from "./components/navigation/Toolbar";
+import { TopSummaryBar } from "./components/summary/TopSummaryBar";
+import { PageTabs } from "./components/navigation/PageTabs";
+import { Toolbar } from "./components/navigation/Toolbar";
 
 function App() {
   // const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -62,10 +62,10 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <NotificationCards notifications={data.notifications} />
-{/* 
+
       <TopSummaryBar />
       <PageTabs />
-      <Toolbar /> */}
+      <Toolbar />
 
       {/* <div className="container mt-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">

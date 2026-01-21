@@ -40,6 +40,19 @@ npm run build
 
 The built files will be in the `dist` directory.
 
+### Preview Production Build Locally
+
+```bash
+# serves the already-built /dist output
+npm run preview
+```
+
+Or, build + preview in one command:
+
+```bash
+npm run preview:build
+```
+
 ## Project Structure
 
 ```
